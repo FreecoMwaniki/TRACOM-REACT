@@ -1,15 +1,27 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
   const [formData, setFormData] = useState({
     emailOrUsername: '',
     password: '',
   });
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-  };
 
+    // tunaretrieve from localstorage
+    const registeredUser = JSON.parse(localStorage.getItem('registeredUser'));
+
+    // Validaaatiion
+    if (registeredUser && (formData.emailOrUsername === registeredUser.email) && (formData.password === registeredUser.password)) {
+      alert('Login successful!');
+      // Redirectttiiion
+      navigate('/home');
+    } else {
+      alert('Invalid credentials');
+    }
+  };
   return (
     <div className="background" style={{
       // backgroundImage: "url(../assets/software.jpeg)",
