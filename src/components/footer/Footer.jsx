@@ -7,6 +7,7 @@ export default function Footer() {
 
   const[userName, setUserName]=useState('TRACOM SOLUTIONS')
       
+  // eslint-disable-next-line no-unused-vars
   function changename(){
     
   setUserName('FREECO');
