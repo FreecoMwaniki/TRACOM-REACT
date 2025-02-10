@@ -10,7 +10,7 @@ function Navbar() {
         {/* <img src={logo} alt="tracom-logo" className="main-logo" /> */}
         <ul id="main-nav-ul">
           <li>
-            <Link to="/home">Home</Link>
+            {/* <Link to="/home">Home</Link> */}
           </li>
           <li>
             <Link to="/about">About</Link>

@@ -1,4 +1,4 @@
--[==import React from "react";
+import React from "react";
 import ima from "../assets/download2.png";
 import girl from "../assets/download (3).jpeg";
 import guys from "../assets/download (2).jpeg";
